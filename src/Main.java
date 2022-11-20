@@ -20,7 +20,6 @@ public class Main {
         highScore = calculateScore(gameOver, score, levelCompleted, bonus);
         System.out.println("Your final score was " + highScore);*/
 
-
         //Challenge
         //Create a method called displayHighScorePosition
         //it should a players name as parameter, and a 2nd parameter as a position in the high score table
@@ -32,9 +31,6 @@ public class Main {
         //it should return an int
         //1 if the score is >1000
         //2 if the score is >500 and < 1000
-
-        String playerName = "Jeff";
-        int playerScore = 1500;
 
         int playerPosition = calculateHighScorePosition(1500);
         displayHighScorePosition("Jeff", playerPosition);
@@ -59,27 +55,33 @@ public class Main {
 
         playerPosition = calculateHighScorePosition(999);
         displayHighScorePosition("999", playerPosition);
-
     }
-
 
     public static void displayHighScorePosition(String playerName, int playerHighScorePosition ){
         System.out.println(playerName + " managed to get into position "
                                       + playerHighScorePosition + " on the high score table");
     }
-
     public  static int calculateHighScorePosition(int score){
-        int position = 0;
+        //int position = 0;
+//        if (score >= 1000){
+//            return 1;
+//        } else if (score >= 500 ){
+//            return 2;
+//        } else if(score >= 100 ) {
+//            return 3;
+//        }
+//        return 4;
+
+        int position = 4;
         if (score >= 1000){
             position = 1;
-        } else if (score >= 500){
+        } else if (score >=500){
             position = 2;
-        } else if(score >= 100){
+        } else if (score >=100){
             position = 3;
-        } else
-            position = 4;
+        }
 
-        return  position;
+        return position;
     }
 
         //public static void calculateScore(boolean gameOver, int score, int levelCompleted, int bonus){
